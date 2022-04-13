@@ -6,6 +6,7 @@
 	"ERROR_MISSING_FILENAME": "Für die Datei konnte kein Dateiname aufgelöst werden.",
 	"ERROR_UNSUPPORTED_CONTENT_TYPE": "Dieser Dateityp wird leider nicht unterstützt. Bitte wählen Sie den Dateityp PDF, DOC, DOCX, PPT, PPTX oder HTML aus.",
 	"ERROR_NO_FILE_SELECTED": "Bitte wählen Sie eine Datei aus.",
+	"ERROR_NO_ORIGIN_INSTANCE": "Ursprungsinstanz von Bb Assist kann nicht bezogen werden. File Transformer kann nicht gestartet werden.",
 	"ERROR_CAPTCHA_NOT_SELECTED": "Dieser Dateityp wird leider nicht unterstützt.",
 	"ERROR_SOMETHING_WENT_WRONG": "Leider ist etwas schiefgegangen.",
 	"DROP_FILE_TO_UPLOAD": "Datei zum Hochladen ablegen",

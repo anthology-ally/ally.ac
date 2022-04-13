@@ -39,7 +39,8 @@ nav ul {
     text-align: center;
 }
 
-#file-transformer-container form {
+#file-transformer-container form,
+#file-transformer-container #covid19-af-status {
     margin: 0 5px;
     max-width: 440px;
 }

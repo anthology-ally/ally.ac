@@ -6,6 +6,7 @@
 	"ERROR_MISSING_FILENAME": "No filename could be resolved for the file",
 	"ERROR_UNSUPPORTED_CONTENT_TYPE": "Sorry, this file type is not supported. Please select a PDF, DOC, DOCX, PPT, PPTX or HTML file",
 	"ERROR_NO_FILE_SELECTED": "Please select a file",
+	"ERROR_NO_ORIGIN_INSTANCE": "Unable to source Bb Assist origin instance. File Transformer is unable to start.",
 	"ERROR_CAPTCHA_NOT_SELECTED": "Sorry, this file type is not supported",
 	"ERROR_SOMETHING_WENT_WRONG": "Oops! Something went wrong",
 	"DROP_FILE_TO_UPLOAD": "Drop file to upload",

@@ -6,6 +6,7 @@
 	"ERROR_MISSING_FILENAME": "No se pudo encontrar un nombre para el archivo",
 	"ERROR_UNSUPPORTED_CONTENT_TYPE": "Lo sentimos, este tipo de archivo no es compatible. Seleccione un archivo PDF, DOC, DOCX, PPT, PPTX o HTML",
 	"ERROR_NO_FILE_SELECTED": "Seleccione un archivo",
+	"ERROR_NO_ORIGIN_INSTANCE": "No se puede obtener la instancia de origen de Bb Assist. File Transformer no puede iniciarse.",
 	"ERROR_CAPTCHA_NOT_SELECTED": "Lo sentimos, este tipo de archivo no es compatible",
 	"ERROR_SOMETHING_WENT_WRONG": "¡Vaya! Algo salió mal",
 	"DROP_FILE_TO_UPLOAD": "Suelte un archivo para cargarlo",

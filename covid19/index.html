@@ -56,6 +56,11 @@
         <main>
             <div id="file-transformer-container" class="clearfix" data-ally-content-id="0">
                 <h2 data-i18n="[html]ENGAGE_FILE_TRANSFORMER"></h2>
+
+                <div style="display: none" id="covid19-af-status">
+                    <p class="explanation" data-i18n="ERROR_NO_ORIGIN_INSTANCE"></p>
+                </div>
+
                 <form id="covid19-af-form" method="get" action="#" name="AllyMicrosite">
                     <p class="explanation" data-i18n="FILE_TRANSFORMER_EXPLANATION"></p>
 
@@ -268,6 +273,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.language.min.js" integrity="sha256-GQa4KOpPyr5vY9JrqY9ibG3IXNyNTzTpb/K4fyReaBY=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.7/jquery.i18n.messagestore.min.js" integrity="sha256-dxDziD29LGTvKo6LXzZmm8o8W87YCu4BOh+tsrDJd4k=" crossorigin="anonymous"></script>
 
+        <script>
+            const siteId = new URL(document.location.href)
+                .searchParams.get('siteId');
+            if (document.location.pathname.startsWith('/bbassist-filetransformer/') &&
+                (siteId === undefined || siteId === null || siteId.length === 0)) {
+
+                document.getElementById('covid19-af-form').style.display = 'none';
+                document.getElementById('covid19-af-status').style.display = 'inherit';
+            }
+        </script>
         <script type="text/javascript" src="/assets/js/covid19.js"></script>
         <script>
             (function(i, s, o, g, r, a, m) {

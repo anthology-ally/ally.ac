@@ -6,6 +6,7 @@
 	"ERROR_MISSING_FILENAME": "Aucun nom de fichier n'a pu être résolu pour le fichier",
 	"ERROR_UNSUPPORTED_CONTENT_TYPE": "Désolé, ce type de fichier n'est pas pris en charge. Veuillez sélectionner un fichier PDF, DOC, DOCX, PPT, PPTX ou HTML",
 	"ERROR_NO_FILE_SELECTED": "Veuillez sélectionner un fichier",
+	"ERROR_NO_ORIGIN_INSTANCE": "Impossible de trouver l'instance d'origine Bb Assist. File Transformer ne peut pas démarrer.",
 	"ERROR_CAPTCHA_NOT_SELECTED": "Désolé, ce type de fichier n'est pas pris en charge",
 	"ERROR_SOMETHING_WENT_WRONG": "Une erreur s'est produite.",
 	"DROP_FILE_TO_UPLOAD": "Déposer le fichier à télécharger",
