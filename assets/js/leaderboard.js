@@ -187,6 +187,25 @@
     }
 
     function loadGraph() {
+        function showConfetti(actual, thresholdLow, thresholdHigh, cookieName) {
+            const confettiStatus = Cookies.get(cookieName);
+
+            if (actual > thresholdLow && actual < thresholdHigh && !confettiStatus) {
+                Cookies.set(cookieName, 'true');
+
+                var confettiSettings = { 
+                    'target': 'my-canvas',
+                    'respawn': false
+                };
+                var confetti = new ConfettiGenerator(confettiSettings);
+                confetti.render();
+
+                $("#leaderboard").append("<div id='record'>Wow! We fixed 100,000 files!</div>");
+                $('#record').css({top:'50%',left:'50%',margin:'-'+($('#record').height() / 2)+'px 0 0 -'+($('#record').width() / 2)+'px'});
+                $('#record').fadeOut(10000, function() {$('#record').remove(); });
+            }
+        }
+
         $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals.json", {_: new Date().getTime()}).done(function (response) {
             var labels = [];
             var points = [];
@@ -198,21 +217,10 @@
                 last = fixes;
             }
 
-            var showConfetti = Cookies.get('confetti_100k');
-            if (last > 100000 && !showConfetti) {
-                Cookies.set('confetti_100k', 'true');
-
-                var confettiSettings = { 
-                    'target': 'my-canvas',
-                    'respawn': false
-                };
-                var confetti = new ConfettiGenerator(confettiSettings);
-                confetti.render();
-
-                $("#leaderboard").append("<div id='record'>Wow! We fixed 100,000 files!</div>");
-                $('#record').css({top:'50%',left:'50%',margin:'-'+($('#record').height() / 2)+'px 0 0 -'+($('#record').width() / 2)+'px'});
-                $('#record').fadeOut(10000);
-            }
+            showConfetti(last, 50000, 100000, 'confetti_2022_50k');
+            showConfetti(last, 100000, 108546, 'confetti_2022_100k');
+            showConfetti(last, 108546, 200000, 'confetti_2022_2021');
+            showConfetti(last, 200000, 1000000, 'confetti_2022_1m');
 
             Highcharts.chart('chart-container', {
                 chart: {
@@ -298,7 +306,7 @@
 	}
 	
 	function updateTimeRemaining() {
-		var t = getTimeRemaining(1621594801000);
+		var t = getTimeRemaining(1653044401000);
 		$('#gaad-hours').text(t.hours);
 		$('#gaad-minutes').text(t.minutes);
 		$('#gaad-seconds').text(t.seconds);
