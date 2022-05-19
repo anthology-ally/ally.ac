@@ -129,7 +129,7 @@
 
     function loadRetro() {
         $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals.json", {_: new Date().getTime()}).done(function (thisYear) {
-            $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/gaad-2020.json", {_: new Date().getTime()}).done(function (lastYear) {
+            $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals-2021.json", {_: new Date().getTime()}).done(function (lastYear) {
                 var last = 0;
                 var start0 = 1621422001000;
                 var start1 = 1589972401000;
@@ -212,11 +212,11 @@
                         }
                     },
                     series: [{
-                        name: 'Fixes 2021',
+                        name: 'Fixes 2022',
                         color: "#00C7D1",
                         data: points0
                     },{
-                        name: 'Fixes 2020',
+                        name: 'Fixes 2021',
                         color: "#00A7A1",
                         data: points1
                     }
