@@ -131,9 +131,9 @@
         $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals.json", {_: new Date().getTime()}).done(function (thisYear) {
             $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals-2021.json", {_: new Date().getTime()}).done(function (lastYear) {
                 var last = 0;
-                var start0 = 1621422001000;
-                var start1 = 1589972401000;
-                var end1 = 1590145201000;
+                var start0 = 1652871601000;
+                var start1 = 1621422001000;
+                var end1 = 1621594684717;
                 var now0 = new Date().getTime();
                 var increment = 300000;
 
