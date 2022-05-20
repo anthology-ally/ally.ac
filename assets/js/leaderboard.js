@@ -158,7 +158,7 @@
                 }
 
                 data.sort(function (left, right) {
-                    return right.fixes_per_student - left.fixes_per_student;
+                    return Number(right.fixes_per_student) - Number(left.fixes_per_student);
                 });
 
                 var position = 1;
@@ -170,7 +170,7 @@
                     const location = element.details.location;
                     if (location in regionalLeaders) {
                         const leader = regionalLeaders[location];
-                        if (leader.fixes_per_student < element.fixes_per_student) {
+                        if (Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
                             regionalLeaders[location] = element;
                         }
                     } else {
