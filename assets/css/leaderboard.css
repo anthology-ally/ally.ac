@@ -138,7 +138,8 @@ footer {
 }
 
 #leaderboard,
-#regional {
+#regional,
+#shoutout {
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -171,6 +172,9 @@ table .logo .logo_container img {
 	max-height: 100%;
 }
 
+table td.no_rank {
+    width: 88px;
+}
 
 table .details .details_name {
 	font-weight: 500;
@@ -183,6 +187,10 @@ table .details_small {
 
 table .details_small .details_small_fixes {
 	margin-bottom: 5px;
+}
+
+table .details_smaller {
+    width: 120px;
 }
 
 a.table_show_full, a.table_show_full:visited, a.table_show_full:hover, a.table_show_full:active {
@@ -206,18 +214,18 @@ a.table_show_full, a.table_show_full:visited, a.table_show_full:hover, a.table_s
 	left: 1px;
 }
 
-#regional {
+#regional, #shoutout {
 	padding-bottom: 50px;
 }
 
-#regional h3 {
+#regional h3, #shoutout h3 {
 	font-size: 20px;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
-#regional table {
+#regional table, #shoutout table {
     margin-bottom: 10px;
 }
 
