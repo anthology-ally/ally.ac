@@ -167,19 +167,24 @@
                 });
 
                 const threshold = Number(100);
+                const overallWinner = data[0];
                 data.forEach(element => {
-                    const location = element.details.location;
-                    const fixes = Number(element.fixes.replace(',', ''));
-                    if (location in regionalLeaders) {
-                        const leader = regionalLeaders[location];
-                        if (fixes > threshold && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
-                            regionalLeaders[location] = element;
-                        }
-                    } else {
-                        if (fixes > threshold) {
-                            regionalLeaders[location] = element;
+                    // According to the rules, each participant may only be selected as a winner for 1 of the possible winner categories
+                    if (element.id !== overallWinner.id) {
+                        const location = element.details.location;
+                        const fixes = Number(element.fixes.replace(',', ''));
+                        if (location in regionalLeaders) {
+                            const leader = regionalLeaders[location];
+                            if (fixes > threshold && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
+                                regionalLeaders[location] = element;
+                            }
+                        } else {
+                            if (fixes > threshold) {
+                                regionalLeaders[location] = element;
+                            }
                         }
                     }
+                    
                 });
                 renderTopFive();
                 renderRegionalLeaders();
