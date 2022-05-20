@@ -170,11 +170,13 @@
                     const location = element.details.location;
                     if (location in regionalLeaders) {
                         const leader = regionalLeaders[location];
-                        if (Number(leader.fixes) > Number(100) && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
+                        if (Number(element.fixes) > Number(100) && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
                             regionalLeaders[location] = element;
                         }
                     } else {
-                        regionalLeaders[location] = element;
+                        if (Number(element.fixes) > Number(100)) {
+                            regionalLeaders[location] = element;
+                        }
                     }
                 });
                 renderTopFive();
