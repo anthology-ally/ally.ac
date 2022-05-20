@@ -139,7 +139,9 @@ footer {
 
 #leaderboard,
 #regional,
-#shoutout {
+#shoutout,
+#regional_us,
+#first_time {
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -214,18 +216,18 @@ a.table_show_full, a.table_show_full:visited, a.table_show_full:hover, a.table_s
 	left: 1px;
 }
 
-#regional, #shoutout {
+#regional, #shoutout, #regional_us, #first_time {
 	padding-bottom: 50px;
 }
 
-#regional h3, #shoutout h3 {
+#regional h3, #shoutout h3, #regional_us h3, #first_time h3 {
 	font-size: 20px;
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
-#regional table, #shoutout table {
+#regional table, #shoutout table, #regional_us table, #first_time table {
     margin-bottom: 10px;
 }
 

@@ -170,7 +170,7 @@
                     const location = element.details.location;
                     if (location in regionalLeaders) {
                         const leader = regionalLeaders[location];
-                        if (Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
+                        if (Number(leader.fixes_per_student) > Number(100) && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
                             regionalLeaders[location] = element;
                         }
                     } else {
