@@ -168,9 +168,11 @@
 
                 const threshold = Number(100);
                 const overallWinner = data[0];
+                const secondPlace = data[1];
+                const thirdPlace = data[2];
                 data.forEach(element => {
                     // According to the rules, each participant may only be selected as a winner for 1 of the possible winner categories
-                    if (element.id !== overallWinner.id) {
+                    if (element.id !== overallWinner.id && element.id !== secondPlace.id && element.id !== thirdPlace.id) {
                         const location = element.details.location;
                         const fixes = Number(element.fixes.replace(',', ''));
                         if (location in regionalLeaders) {

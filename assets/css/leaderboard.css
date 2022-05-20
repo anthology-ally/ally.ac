@@ -216,7 +216,15 @@ a.table_show_full, a.table_show_full:visited, a.table_show_full:hover, a.table_s
 	left: 1px;
 }
 
-#regional, #shoutout, #regional_us, #first_time {
+#shoutout, #regional_us {
+    padding-bottom: 30px;
+}
+
+#first_time {
+    padding-bottom: 50px;
+}
+
+#regional {
 	padding-bottom: 50px;
 }
 
