@@ -166,15 +166,17 @@
                     element.position = position++;
                 });
 
+                const threshold = Number(100);
                 data.forEach(element => {
                     const location = element.details.location;
+                    const fixes = Number(element.fixes.replace(',', ''));
                     if (location in regionalLeaders) {
                         const leader = regionalLeaders[location];
-                        if (Number(element.fixes) > Number(100) && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
+                        if (fixes > threshold && Number(leader.fixes_per_student) < Number(element.fixes_per_student)) {
                             regionalLeaders[location] = element;
                         }
                     } else {
-                        if (Number(element.fixes) > Number(100)) {
+                        if (fixes > threshold) {
                             regionalLeaders[location] = element;
                         }
                     }
