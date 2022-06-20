@@ -42,20 +42,11 @@
                             <span class="hidden-xs hidden-sm" data-i18n="NAVIGATION_LINK_INDEX"></span></a>
                     </h1>
                 </div>
-                <div class="col-xs-11 col-sm-8">
-                    <ul>
-                        <li><a href="/courses.html" data-i18n="NAVIGATION_LINK_COURSES"></a></li>
-                        <li><a href="/websites.html" data-i18n="NAVIGATION_LINK_WEBSITES"></a></li>
-                        <li class="hidden-xs hidden-sm"><a href="https://usergroup.ally.ac" target="_blank" data-i18n="NAVIGATION_LINK_COMMUNITY"></a></li>
-                        <li class="hidden-xs hidden-sm"><a href="https://usergroup.ally.ac/s/tour/" target="_blank" data-i18n="NAVIGATION_LINK_ALLY_TOUR"></a></li>
-                        <li><a class="hidden-xs hidden-sm" id="btn-primary" href="/demo.html" data-i18n="NAVIGATION_LINK_REQUEST_DEMO"></a></li>
-                    </ul>
-                </div>
             </nav>
         </section>
         <main>
             <div id="file-transformer-container" class="clearfix" data-ally-content-id="0">
-                <h2 data-i18n="[html]ENGAGE_FILE_TRANSFORMER"></h2>
+                <h2 id="covid-19-engage"></h2>
 
                 <div style="display: none" id="covid19-af-status">
                     <p class="explanation" data-i18n="ERROR_NO_ORIGIN_INSTANCE"></p>
@@ -162,7 +153,7 @@
             </div>
 
             <div class="triangle-green">
-                <section class="courses-features features container">
+                <section class="courses-features formats features container">
                     <div class="row">
                         <div class="col-xs-12 col-lg-12">
                             <h3 data-i18n="FEATURE_FILE_TRANSFORMER_HEADING"></h3>
@@ -195,7 +186,7 @@
                             <p data-i18n="FORMAT_AUDIO_DESCRIPTION"></p>
                         </div>
                         <div class="col-xs-12 col-sm-2 col-md-1">
-                            <img class="features-icon" src="/assets/img/courses/icon-file-epub.svg" alt="" />
+                            <img class="features-icon" src="/assets/img/courses/icon-file-html.svg" alt="" />
                         </div>
                         <div class="col-xs-12 col-sm-4">
                             <h4 data-i18n="FORMAT_HTML"></h4>
@@ -211,7 +202,7 @@
                             <p data-i18n="FORMAT_BRAILLE_DESCRIPTION"></p>
                         </div>
                         <div class="col-xs-12 col-sm-2 col-md-1">
-                            <img class="features-icon" src="/assets/img/courses/icon-file-html.svg" alt="" />
+                            <img class="features-icon" src="/assets/img/courses/icon-file-epub.svg" alt="" />
                         </div>
                         <div class="col-xs-12 col-sm-4">
                             <h4 data-i18n="FORMAT_EPUB"></h4>
@@ -226,6 +217,8 @@
                             <h4 data-i18n="FORMAT_BEELINE"></h4>
                             <p data-i18n="FORMAT_BEELINE_DESCRIPTION"></p>
                         </div>
+                        <div class="col-xs-12 col-sm-2 col-md-1"></div>
+                        <div class="col-xs-12 col-sm-4"></div>
                     </div>
                     <div class="row">
                         <a
@@ -281,6 +274,9 @@
 
                 document.getElementById('covid19-af-form').style.display = 'none';
                 document.getElementById('covid19-af-status').style.display = 'inherit';
+                $('#covid-19-engage').attr('data-i18n', '[html]ENGAGE_FILE_TRANSFORMER_NO_SITE_ID');
+            } else {
+                $('#covid-19-engage').attr('data-i18n', '[html]ENGAGE_FILE_TRANSFORMER');
             }
         </script>
         <script type="text/javascript" src="/assets/js/covid19.js"></script>
