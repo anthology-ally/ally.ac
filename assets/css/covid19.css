@@ -20,6 +20,7 @@ nav ul {
     flex: 1;
     flex-direction: column;
     padding-bottom: 70px;
+    margin-top: 32px;
 }
 
 #file-transformer-container h2 {
