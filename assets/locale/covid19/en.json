@@ -38,6 +38,8 @@
 	"FORMAT_EPUB_DESCRIPTION": "For reading and annotating as an e-book on an iPad and other e-book readers.",
 	"FORMAT_BEELINE": "Beeline Reader",
 	"FORMAT_BEELINE_DESCRIPTION": "Enhanced version for faster and more focused on-screen reading.",
+	"FORMAT_IMMERSIVE_READER": "Immersive Reader",
+	"FORMAT_IMMERSIVE_READER_DESCRIPTION": "Aid reading comprehension and grammar skills. Internet required.",
 	"LEARN_MORE": "Learn more about Alternative Formats",
 	"NAVIGATION_LINK_INDEX": "Blackboard Ally",
 	"NAVIGATION_LINK_COURSES": "Courses",
