@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="25px" viewBox="0 0 32 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440-ally.ac-home" transform="translate(-47.000000, -27.000000)" fill="#222222">
+            <g id="heading">
+                <g id="allyLogo" transform="translate(47.000000, 27.000000)">
+                    <path d="M12,14 C12,11.7917384 13.7904428,10 16,10 C18.2095572,10 20,11.7917384 20,14 C20,16.2082616 18.2095572,18 16,18 C13.7904428,18 12,16.2082616 12,14 L12,14 Z M0,25 L7.84048439,25 C9.25858649,21.7259872 12.4205032,19.4442547 16.0935379,19.4442547 C19.7665727,19.4442547 22.9284894,21.7259872 24.3465915,25 L32,25 L15.9983297,0 L0,25 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
