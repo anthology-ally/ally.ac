@@ -1,4 +1,6 @@
 (function() {
+
+	const goLiveTime = new Date(2023, 4, 18, 0, 0, 0, 0).getTime();
     
     function getTimeRemaining(endtime){
   		var t = endtime - new Date().getTime();
@@ -25,7 +27,7 @@
 	}
 	
 	function updateTimeRemaining() {
-		var t = getTimeRemaining(new Date(2022, 4, 19, 0, 0, 0, 0).getTime());
+		var t = getTimeRemaining(goLiveTime);
 		$('#gaad-days').text(t.days);
 		$('#gaad-hours').text(t.hours);
 		$('#gaad-minutes').text(t.minutes);
@@ -34,5 +36,22 @@
     
     updateTimeRemaining();
     setInterval(updateTimeRemaining, 1000);
-    
+
+	// When the current time is greater than the go live time, swap index.html for index-leaderboard.html
+	const interval = setInterval(function() {
+        const now = new Date().getTime();
+        if (now >= goLiveTime) {
+            clearInterval(interval);
+            window.location.href = "leaderboard.html";
+        }
+    }, 500);
+
+    // When the window loads inserts some text followed by the goLiveTime as a readable date to the .gaad-date-container
+	window.addEventListener('load', function() {
+		const date = new Date(goLiveTime);
+		const readableDate = date.toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' });
+		const text = 'Until Global Accessibility Awareness Day - ';
+		$('#gaad-date-container').text(text + readableDate);
+	});
+
 })();
