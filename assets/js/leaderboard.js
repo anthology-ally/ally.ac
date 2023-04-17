@@ -229,8 +229,8 @@
             }
 
             showConfetti(last, 50000, 100000, 'confetti_2023_50k', 'Wow! We fixed 50,000 files!');
-            showConfetti(last, 100000, 108546, 'confetti_2023_100k', 'Wow! We fixed 100,000 files!');
-            showConfetti(last, 110248, 200000, 'confetti_2023_2022', 'Wow! We beat the last year\'s record!');
+            showConfetti(last, 100000, 110248, 'confetti_2023_100k', 'Wow! We fixed 100,000 files!');
+            showConfetti(last, 110248, 150000, 'confetti_2023_2022', 'Wow! We beat the last year\'s record!');
             showConfetti(last, 150000, 1000000, 'confetti_2023_1m', 'Wow! We fixed 150,000 files!');
 
             Highcharts.chart('chart-container', {
