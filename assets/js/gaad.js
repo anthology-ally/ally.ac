@@ -1,5 +1,6 @@
 (function() {
 
+	const UTCMinus12 = 12 * 36e5; //First time zone
 	const goLiveTime = new Date(2023, 4, 18, 0, 0, 0, 0).getTime();
     
     function getTimeRemaining(endtime){
@@ -25,22 +26,22 @@
     		'seconds': seconds
   		};
 	}
-	
+
 	function updateTimeRemaining() {
-		var t = getTimeRemaining(goLiveTime);
+		var t = getTimeRemaining(goLiveTime - UTCMinus12) ;
 		$('#gaad-days').text(t.days);
 		$('#gaad-hours').text(t.hours);
 		$('#gaad-minutes').text(t.minutes);
 		$('#gaad-seconds').text(t.seconds);
-	};
+	}
     
     updateTimeRemaining();
     setInterval(updateTimeRemaining, 1000);
 
 	// When the current time is greater than the go live time, swap index.html for index-leaderboard.html
 	const interval = setInterval(function() {
-        const now = new Date().getTime();
-        if (now >= goLiveTime) {
+		const now = new Date().getTime() - UTCMinus12;
+        if (now >= (goLiveTime - UTCMinus12) ){
             clearInterval(interval);
             window.location.href = "leaderboard.html";
         }

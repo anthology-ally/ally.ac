@@ -228,10 +228,10 @@
                 last = fixes;
             }
 
-            showConfetti(last, 50000, 100000, 'confetti_2022_50k', 'Wow! We fixed 50,000 files!');
-            showConfetti(last, 100000, 108546, 'confetti_2022_100k', 'Wow! We fixed 100,000 files!');
-            showConfetti(last, 108546, 200000, 'confetti_2022_2021', 'Wow! We beat the last year\'s record!');
-            showConfetti(last, 200000, 1000000, 'confetti_2022_1m', 'Wow! We fixed 200,000 files!');
+            showConfetti(last, 50000, 100000, 'confetti_2023_50k', 'Wow! We fixed 50,000 files!');
+            showConfetti(last, 100000, 110248, 'confetti_2023_100k', 'Wow! We fixed 100,000 files!');
+            showConfetti(last, 110248, 150000, 'confetti_2023_2022', 'Wow! We beat the last year\'s record!');
+            showConfetti(last, 150000, 1000000, 'confetti_2023_1m', 'Wow! We fixed 150,000 files!');
 
             Highcharts.chart('chart-container', {
                 chart: {
@@ -315,9 +315,10 @@
     		'seconds': seconds
   		};
 	}
-	
+
+    const endingTimeInTonga = new Date(2023, 4, 18, 23, 59, 59, 0).getTime() + (13 * 36e5); // UTC + 13 hours
 	function updateTimeRemaining() {
-		var t = getTimeRemaining(1653044401000);
+		var t = getTimeRemaining(endingTimeInTonga);
 		$('#gaad-hours').text(t.hours);
 		$('#gaad-minutes').text(t.minutes);
 		$('#gaad-seconds').text(t.seconds);
@@ -325,5 +326,4 @@
     
     updateTimeRemaining();
     setInterval(updateTimeRemaining, 1000);
-
 })();
