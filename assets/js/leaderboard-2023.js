@@ -218,7 +218,7 @@
             }
         }
 
-        $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals.json", {_: new Date().getTime()}).done(function (response) {
+        $.getJSON("https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/totals2023.json", {_: new Date().getTime()}).done(function (response) {
             var labels = [];
             var points = [];
             var last = 0;
