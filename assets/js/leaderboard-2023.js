@@ -190,7 +190,7 @@
                     
                 });
                 renderTopFive();
-                renderRegionalLeaders();
+                // renderRegionalLeaders(); //Disabled until after the event
             })
                 .fail(function (data) {
                     console.log(data);
