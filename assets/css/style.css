@@ -129,6 +129,21 @@ footer ul li a.active {
 .header {
     background-color: #121519;
     z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header > div {
+    flex: 1 0 50%; /* grow, shrink, basis */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+@media (max-width: 568px) { /* adjust this value as needed */
+    .header > div {
+        flex-basis: 100%;
+    }
 }
 
 /* Triangles */
