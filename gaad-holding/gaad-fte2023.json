@@ -1,0 +1,512 @@
+{
+    "us-206": {
+        "name": "Rogue Community College",
+        "fte": "2670",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-9879": {
+        "name": "Webster University",
+        "fte": "3400",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-318": {
+        "name": "Cowley College",
+        "fte": "1570",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-1025": {
+        "name": "Southern Illinois University Edwardsville",
+        "fte": "10000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-6490": {
+        "name": "Texas A & M International",
+        "fte": "7105",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-787": {
+        "name": "Robert Gordon University",
+        "fte": "16000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-9159": {
+        "name": "Springfield Technical Community College",
+        "fte": "3000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-2863": {
+        "name": "Towson University",
+        "fte": "20001",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-8863": {
+        "name": "Universidad Continental",
+        "fte": "29084",
+        "location": "Latin America",
+        "hasLogo": true
+    },
+    "us-6963": {
+        "name": "Eastern Connecticut State University",
+        "fte": "4400",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-638": {
+        "name": "University of Oxford",
+        "fte": "20785",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "eu-402": {
+        "name": "Imam Abdulrahman bin Faisal University (IAU)",
+        "fte": "8000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-192": {
+        "name": "Kentucky Community and Technical College System - KCTCS",
+        "fte": "124654",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-6729": {
+        "name": "Angelo State University",
+        "fte": "10000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-8586": {
+        "name": "Texas A&M University-Commerce",
+        "fte": "9000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-152": {
+        "name": "Lanier Technical College - Part of TCSG",
+        "fte": "4973",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-12086": {
+        "name": "University of Nevada, Las Vegas - UNLV",
+        "fte": "31000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-11427": {
+        "name": "Life University",
+        "fte": "2606",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-289": {
+        "name": "University of Leeds",
+        "fte": "37000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-86": {
+        "name": "Southern Crescent Technical College - Part of TCSG",
+        "fte": "5300",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-85": {
+        "name": "North Georgia Technical College - Part of TCSG",
+        "fte": "2612",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-97": {
+        "name": "Southern Regional Technical College - Part of TCSG",
+        "fte": "2100",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-82": {
+        "name": "Technical College System of Georgia - Part of TCSG",
+        "fte": "59071",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-56": {
+        "name": "Edge Hill University",
+        "fte": "14000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-11851": {
+        "name": "University of Mississippi",
+        "fte": "19900",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-158": {
+        "name": "Georgia Piedmont Technical College - Part of TCSG",
+        "fte": "2600",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-96": {
+        "name": "Albany Technical College - Part of TCSG",
+        "fte": "2000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-1670": {
+        "name": "Wake Technical Community College",
+        "fte": "20224",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-6710": {
+        "name": "University of Texas at Dallas",
+        "fte": "29000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-5759": {
+        "name": "Bryant & Stratton College Inc - BSC",
+        "fte": "6426",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-704": {
+        "name": "ADA University",
+        "fte": "3194",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-151": {
+        "name": "Ogeechee Technical College - Part of TCSG",
+        "fte": "689",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-104": {
+        "name": "Columbus Technical College - Part of TCSG",
+        "fte": "2867",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-14083": {
+        "name": "Miami Dade College",
+        "fte": "44907",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-149": {
+        "name": "Coastal Pines Technical College - Part of TCSG",
+        "fte": "1629",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-11513": {
+        "name": "Northern Illinois University",
+        "fte": "15649",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-12646": {
+        "name": "San Jose State University",
+        "fte": "27165",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "ap2-224": {
+        "name": "Charles Sturt University",
+        "fte": "30000",
+        "location": "Asia Pacific",
+        "hasLogo": true
+    },
+    "eu-198": {
+        "name": "North East Scotland College",
+        "fte": "9800",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-12660": {
+        "name": "Johns Hopkins University",
+        "fte": "24000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-159": {
+        "name": "Wiregrass Georgia Technical College - Part of TCSG",
+        "fte": "2265",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-8087": {
+        "name": "University of Alabama",
+        "fte": "38000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-1871": {
+        "name": "Western Kentucky University",
+        "fte": "13000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-102": {
+        "name": "Augusta Technical College - Part of TCSG",
+        "fte": "3310",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-3780": {
+        "name": "CSU Sacramento",
+        "fte": "21900",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-340": {
+        "name": "University of Surrey",
+        "fte": "14500",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "eu-422": {
+        "name": "University of Glasgow",
+        "fte": "32000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-6120": {
+        "name": "Thomas Jefferson University",
+        "fte": "8300",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-2810": {
+        "name": "California State University, Fresno",
+        "fte": "19921",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-4408": {
+        "name": "Winthrop University",
+        "fte": "3700",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-13722": {
+        "name": "Jackson Community College",
+        "fte": "6702",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-100": {
+        "name": "Athens Technical College - Part of TCSG",
+        "fte": "2200",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-262": {
+        "name": "Bocconi",
+        "fte": "14396",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-5164": {
+        "name": "University of North Dakota",
+        "fte": "10173",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "ap2-176": {
+        "name": "Deakin University",
+        "fte": "53314",
+        "location": "Asia Pacific",
+        "hasLogo": true
+    },
+    "eu-562": {
+        "name": "University College Dublin",
+        "fte": "35000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-12234": {
+        "name": "University of Kansas Medical Center (KUMC)",
+        "fte": "3766",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-14820": {
+        "name": "Prince George's Community College",
+        "fte": "5000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-5243": {
+        "name": "Austin Community College",
+        "fte": "24000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-547": {
+        "name": "University of St Andrews",
+        "fte": "12000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-9523": {
+        "name": "Georgia Adult Education - Part of TCSG",
+        "fte": "2086",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-4": {
+        "name": "Utah State University",
+        "fte": "27943",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-11782": {
+        "name": "Holy Family University",
+        "fte": "3011",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-12429": {
+        "name": "University of Arkansas Grantham",
+        "fte": "2000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-6860": {
+        "name": "Duoc UC",
+        "fte": "20000",
+        "location": "Latin America",
+        "hasLogo": true
+    },
+    "eu-38": {
+        "name": "The University of Aberdeen",
+        "fte": "13000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-101": {
+        "name": "Atlanta Technical College - Part of TCSG",
+        "fte": "3000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-390": {
+        "name": "University of Salford",
+        "fte": "20000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-1955": {
+        "name": "Cleveland State University",
+        "fte": "13207",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-185": {
+        "name": "University of Central Lancashire",
+        "fte": "18000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-103": {
+        "name": "Central Georgia Technical College - Part of TCSG",
+        "fte": "4356",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-154": {
+        "name": "York St John University",
+        "fte": "9781",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "us-368": {
+        "name": "Kansas City Kansas Community College",
+        "fte": "2877",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-7112": {
+        "name": "Indian River State College",
+        "fte": "21538",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "ap2-140": {
+        "name": "James Cook University",
+        "fte": "16789",
+        "location": "Asia Pacific",
+        "hasLogo": true
+    },
+    "eu-375": {
+        "name": "South West College",
+        "fte": "5000",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    },
+    "ap2-150": {
+        "name": "Charles Darwin University",
+        "fte": "10989",
+        "location": "Asia Pacific",
+        "hasLogo": true
+    },
+    "us-9444": {
+        "name": "South Florida State College",
+        "fte": "1967",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-605": {
+        "name": "University of St. Thomas",
+        "fte": "3000",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-6996": {
+        "name": "University of Arkansas",
+        "fte": "30936",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-12741": {
+        "name": "University of Maryland Eastern Shore",
+        "fte": "2518",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "ap2-161": {
+        "name": "Curtin University",
+        "fte": "33633",
+        "location": "Asia Pacific",
+        "hasLogo": true
+    },
+    "us-4127": {
+        "name": "Butler County Community College",
+        "fte": "1463",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "us-9955": {
+        "name": "Maryville University",
+        "fte": "3999",
+        "location": "North America",
+        "hasLogo": true
+    },
+    "eu-75": {
+        "name": "University of Bristol",
+        "fte": "22574",
+        "location": "Europe and Middle East",
+        "hasLogo": true
+    }
+}
