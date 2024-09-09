@@ -1,0 +1,179 @@
+html {
+    height: 100%;
+}
+
+body {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    text-align: left;
+}
+
+#topcontainer {
+	background-color: #263438;
+	background: url('/assets/img/bgPanel-header.png') center top;
+	background-size: 1000%;
+}
+
+nav ul {
+    margin-left: 30px;
+}
+
+#gaad-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 40px 20px 50px;
+}
+
+#gaad-container h2 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+}
+
+#gaad-container .explanation {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    max-width: 520px;
+    text-align: center;
+}
+
+#gaad-container .explanation .hashtag {
+	color: #00C7D1;
+	display: block;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+#gaad-container .explanation .btn-secondary {
+	background-color: #00C7D1;
+	padding: 10px 30px;
+}
+
+#gaad-container #countdown {
+	background-color: #0F2F35;
+	margin-bottom: 50px;
+	padding: 30px 20px;
+	text-align: center;
+	width: 440px;
+}
+
+#gaad-container #countdown .countdown-row {
+	display: inline-block;
+	width: 350px;
+}
+
+#gaad-container #countdown .countdown-number {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#gaad-container #countdown .countdown-unit {
+	position: relative;
+	top: -5px;
+}
+
+.triangle-green section,
+.triangle-blue section {
+	padding-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 650px;
+}
+
+.triangle-green section h3,
+.triangle-blue section h3 {
+	font-size: 35px;
+}
+
+.triangle-blue section p,
+.triangle-green section p {
+	font-size: 18px;
+}
+
+.triangle-green a:not(.btn-secondary) {
+	color: #00838A;
+}
+
+.triangle-blue a {
+	color: #00C7D1;
+}
+
+.triangle-blue {
+	background: url(/assets/img/bgPanel-header.png) center bottom no-repeat;
+    background-color: #263438;
+}
+
+.triangle-blue h3,
+.triangle-blue p,
+.triangle-blue a.btn-secondary {
+	color: #FFF;
+}
+
+#gaad-video {
+	padding: 40px 20px 50px;
+}
+
+#gaad-year-nav {
+	display: flex;
+	align-items: center;
+}
+
+#gaad-year-nav .prev-year, #gaad-year-nav .next-year {
+	display: inline-block;
+	background-color: #00C7D1;
+	mask: url("/assets/img/caret.svg") center no-repeat;
+	width: 20px;
+	height: 20px;
+
+	&:disabled {
+		background-color: #0c5460;
+	}
+}
+
+#gaad-year-nav .next-year {
+	transform: rotate(180deg);
+}
+
+@media (max-width: 480px) {
+	#gaad-container #countdown {
+		width: 320px;
+	}
+
+	#gaad-container #countdown .countdown-row {
+		width: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+	.features .row:last-of-type {
+		margin-top: auto;
+	}
+
+	.triangle-green {
+    	background-size: 60px;
+	}
+}
+
+@media (max-width: 1100px) {
+	nav {
+		text-align: center;
+	}
+
+	#gaad-container #countdown {
+		margin-top: 0px;
+		margin-bottom: 40px;
+	}
+}
+
+footer {
+	background-color: #263438;
+    text-align: center;
+}

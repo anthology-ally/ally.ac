@@ -88,11 +88,6 @@ input.form-control {
 
 /* Navigation */
 
-nav,
-footer {
-    margin-bottom: 40px;
-}
-
 nav ul,
 footer ul {
     margin-top: 24px;
