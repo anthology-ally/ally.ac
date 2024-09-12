@@ -32,6 +32,8 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<canvas id="confetti-canvas" style="position: absolute"></canvas>
+
 <div id="topcontainer">
 
     <section id="top" class="container">
@@ -40,6 +42,7 @@
             <div class="col-xs-12 col-sm-6 text-sm-left">
                 <h1>
                     <a href="/index.html"><img src="/assets/img/ally-a-new.svg" alt="Anthology Ally Homepage" style="width: 220px"></a>
+                    <span class="sr-only">Anthology Ally Homepage</span>
                 </h1>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -65,7 +68,7 @@
     <main>
         <div id="gaad-container" class="clearfix">
             <div id="countdown">
-                <span class="sr-only">Time remaining until the Fix Your Content Day</span>
+                <span class="sr-only" id="gaad-date-container-sr">Time remaining until the Fix Your Content Day</span>
                 <div class="row countdown-row">
                     <div class="col-xs-3">
                         <div class="text-center">

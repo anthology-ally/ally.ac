@@ -7,6 +7,7 @@
             urlTotals: publicBucketUrl + "totals-2021.json",
             urlClients: publicBucketUrl + "clients-2021.json",
             urlDetails: publicBucketUrl + "fte-2021.json",
+            achievements: [50000, 100000, 108546, 150000],
         },
         {
             year: 2022,
@@ -14,6 +15,7 @@
             urlTotals: publicBucketUrl + "totals.json",
             urlClients: publicBucketUrl + "clients.json",
             urlDetails: publicBucketUrl + "fte.json",
+            achievements: [50000, 100000, 108546, 150000],
         },
         {
             year: 2023,
@@ -21,6 +23,7 @@
             urlTotals: publicBucketUrl + "totals2023.json",
             urlClients: publicBucketUrl + "clients2023.json",
             urlDetails: publicBucketUrl + "gaad-fte2023.json",
+            achievements: [50000, 100000, 110248, 150000],
         },
         {
             year: 2024,
@@ -28,6 +31,7 @@
             urlTotals: publicBucketUrl + "totals2024.json",
             urlClients: publicBucketUrl + "clients2024.json",
             urlDetails: publicBucketUrl + "gaad-fte2024.json",
+            achievements: [20000, 40000, 89937, 100000],
         },
     ];
 
@@ -66,9 +70,9 @@
     let year$ = new ManagedVariable(yearsConfig[yearsConfig.length-1]);
     let leaderboard$ = new ManagedVariable(false);
     let show$ = new ManagedVariable('top5');
-    let data$ = new ManagedVariable();
-    let regionalLeaders$ = new ManagedVariable();
-    let totals$ = new ManagedVariable();
+    let data$ = new ManagedVariable({}); // year -> data
+    let regionalLeaders$ = new ManagedVariable({}); // year -> regionalLeaders
+    let totals$ = new ManagedVariable({}); // year -> totals
 
     function formatNumber(nr) {
         return nr.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -197,7 +201,7 @@
             Cookies.set(cookieName, 'true');
 
             var confettiSettings = {
-                'target': 'my-canvas',
+                'target': 'confetti-canvas',
                 'respawn': false
             };
             var confetti = new ConfettiGenerator(confettiSettings);
@@ -210,6 +214,8 @@
     }
 
     function loadTotals(year) {
+        if (totals$.value[year.year]) return;
+
         $.getJSON(year.urlTotals, {_: new Date().getTime()}).done(function (response) {
             var labels = [];
             var points = [];
@@ -222,12 +228,17 @@
             }
 
             totals$.set({
-                labels, points, last
+                ...totals$.value,
+                [year.year]: {
+                    labels, points, last
+                },
             })
         });
     }
 
     function loadData(year) {
+        if (data$.value[year.year]) return;
+
         /**
          * Hack for 2023- to add a suffix as a special case for these institutions
          * @type {string[]}
@@ -328,8 +339,8 @@
 
                 });
 
-                data$.set(data);
-                regionalLeaders$.set(regionalLeaders);
+                data$.set({...data$.value, [year.year]: data});
+                regionalLeaders$.set({...regionalLeaders$.value, [year.year]: Object.values(regionalLeaders)});
             })
             .fail(function (data) {
                 console.log(data);
@@ -343,10 +354,6 @@
     use(year$, (year) => {
         const goLiveTime = year.date - 11 * 36e5; // First time zone
         const endTime = year.date + (24 + 13) * 36e5; // 24 hours + last time zone
-
-        const readableDate = new Date(year.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' });
-        const text = 'Until Fix Your Content Day - ';
-        $('#gaad-date-container').text(text + readableDate);
 
         const yearIndex = yearsConfig.indexOf(year);
 
@@ -365,17 +372,31 @@
         }
         yearNav.find('.prev-year').attr("disabled", !(yearIndex > 0));
 
-        function updateTimeRemaining() {
-            const t = getTimeRemaining(goLiveTime) ;
+        function updateTimeRemaining(time) {
+            const t = getTimeRemaining(time) ;
             $('#gaad-days').text(t.days);
             $('#gaad-hours').text(t.hours);
             $('#gaad-minutes').text(t.minutes);
             $('#gaad-seconds').text(t.seconds);
         }
 
-        if (intervalTimeRemaining) clearInterval(intervalTimeRemaining);
-        intervalTimeRemaining = setInterval(updateTimeRemaining, 1000);
-        updateTimeRemaining();
+        if (new Date().getTime() < goLiveTime) {
+            const readableDate = new Date(year.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' });
+            const text = 'Until Fix Your Content Day - ';
+            $('#gaad-date-container').text(text + readableDate);
+            $('#gaad-date-container-sr').text('Time remaining until the Fix Your Content Day');
+
+            if (intervalTimeRemaining) clearInterval(intervalTimeRemaining);
+            intervalTimeRemaining = setInterval(() => updateTimeRemaining(goLiveTime), 1000);
+            updateTimeRemaining(goLiveTime);
+        } else {
+            $('#gaad-date-container').text('To the end of Fix Your Content Day');
+            $('#gaad-date-container-sr').text('Time remaining until the end of the Fix Your Content Day');
+
+            if (intervalTimeRemaining) clearInterval(intervalTimeRemaining);
+            intervalTimeRemaining = setInterval(() => updateTimeRemaining(endTime), 1000);
+            updateTimeRemaining(endTime);
+        }
 
         if(timeoutGoLive) clearTimeout(timeoutGoLive);
         if (new Date().getTime() > goLiveTime) {
@@ -403,14 +424,36 @@
         }
     });
 
-    use(totals$, (totals) => {
-        if(totals) {
-            const {points, last} = totals;
+    use(totals$, year$, (totals, year) => {
+        if(totals[year.year]) {
+            const {points, last} = totals[year.year];
 
-            showConfetti(last, 50000, 100000, 'confetti_2024_50k', 'Wow! We fixed 50,000 files!');
-            showConfetti(last, 100000, 110248, 'confetti_2024_100k', 'Wow! We fixed 100,000 files!');
-            showConfetti(last, 110248, 150000, 'confetti_2024_2022', 'Wow! We beat the last year\'s record!');
-            showConfetti(last, 150000, 1000000, 'confetti_2024_1m', 'Wow! We fixed 150,000 files!');
+            const thousandsString = (num) => {
+                const numStr = num.toString();
+                const thousands = numStr.substring(0, numStr.length - 3);
+                return `${thousands}k`;
+            }
+
+            showConfetti(
+                last, year.achievements[0], year.achievements[1],
+                `confetti_${year.year}_${thousandsString(year.achievements[0])}`,
+                `Wow! We fixed ${formatNumber(year.achievements[0])} files!`
+            );
+            showConfetti(
+                last, year.achievements[1], year.achievements[2],
+                `confetti_${year.year}_${thousandsString(year.achievements[1])}`,
+                `Wow! We fixed ${formatNumber(year.achievements[1])} files!`
+            );
+            showConfetti(
+                last, year.achievements[2], year.achievements[3],
+                `confetti_${year.year}_${year.year-1}`,
+                `Wow! We beat the last year\'s record!`
+            );
+            showConfetti(
+                last, year.achievements[3], 10000000,
+                `confetti_${year.year}_${thousandsString(year.achievements[3])}`,
+                `Wow! We fixed ${formatNumber(year.achievements[3])} files!`
+            );
 
             Highcharts.chart('chart-container', {
                 chart: {
@@ -480,9 +523,9 @@
         }
     });
 
-    use(show$, data$, (show, data) => {
+    use(show$, data$, year$, (show, data, year) => {
         if(show === "top5") {
-            renderTopFive(data);
+            renderTopFive(data[year.year]);
             $('.table_show_full').text('Show full list');
             $('.table_show_full').off('click');
             $('.table_show_full').on('click', function (e) {
@@ -490,7 +533,7 @@
                 e.preventDefault();
             });
         } else if (show === 'all') {
-            renderAll(data);
+            renderAll(data[year.year]);
             $('.table_show_full').text('Collapse list');
             $('.table_show_full').off('click');
             $('.table_show_full').on('click', function (e) {
@@ -500,11 +543,10 @@
         }
     });
 
-    use(regionalLeaders$, (regionalLeaders) => {
+    use(regionalLeaders$, year$, (regionalLeaders, year) => {
         $("#regional_leaders").html('');
-        if(regionalLeaders) {
-            for (var key in regionalLeaders) {
-                var leader = regionalLeaders[key];
+        if(regionalLeaders[year.year]) {
+            for (var leader of regionalLeaders[year.year]) {
                 renderRegion(leader);
             }
         }
