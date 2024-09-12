@@ -11,8 +11,8 @@ body {
 
 #topcontainer {
 	background-color: #263438;
-	background: url('/assets/img/bgPanel-header.png') center top;
-	background-size: 1000%;
+	background: url('/assets/img/background_7000.png') center bottom repeat-y;
+	background-size: 500%;
 }
 
 nav ul {
@@ -99,7 +99,7 @@ nav ul {
 }
 
 .triangle-green a:not(.btn-secondary) {
-	color: #00838A;
+	color: #007077;
 }
 
 .triangle-blue a {
