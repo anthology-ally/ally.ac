@@ -250,6 +250,7 @@ a.table_show_full, a.table_show_full:visited, a.table_show_full:hover, a.table_s
 #confetti-canvas {
     height:100%;
     width:100%;
+    pointer-events: none;
 }
 
 #record {
