@@ -352,7 +352,7 @@
     let timeoutGoLive;
 
     use(year$, (year) => {
-        const goLiveTime = year.date - 11 * 36e5; // First time zone
+        const goLiveTime = year.date - 12 * 36e5; // First time zone
         const endTime = year.date + (24 + 13) * 36e5; // 24 hours + last time zone
 
         const yearIndex = yearsConfig.indexOf(year);
