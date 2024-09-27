@@ -1,6 +1,6 @@
 (function() {
 
-    const baseUrl = 'https://prod.ally.ac';
+    const baseUrl = 'https://performance.ally.ac';
 
     $(document).ready(function() {
         checkClientSecret();
@@ -12,8 +12,7 @@
     });
 
     function checkClientSecret() {
-        const token = getJwtToken();
-        console.log(token);
+        const token = getJwtToken(generateAllowAllPolicy());
 
         if (token) {
             $('#api-section-authentication .api-try-it-out pre').text(`Authorization: Bearer ${token}`);
@@ -25,7 +24,10 @@
                 ally.ready(function() {
                     window.ui = ally.ui({
                         'client': {
-                            'auth': () => Promise.resolve({'bearer': getJwtToken()}),
+                            'auth': (hashId) => {
+                                const policy = (hashId) ? generateFormatRequestPolicy(hashId) : generateBatchPolicy()
+                                return Promise.resolve({'bearer': getJwtToken(policy)})
+                            },
                             'baseUrl': baseUrl,
                             'clientId': getClientId()
                         },
@@ -52,7 +54,7 @@
             const response = await fetch(url, {
                 'body': fd,
                 'headers': {
-                    'Authorization': `Bearer ${getJwtToken()}`
+                    'Authorization': `Bearer ${getJwtToken(generateAllowAllPolicy())}`
                 },
                 'method': 'POST'
             });
@@ -81,7 +83,7 @@
 
     function setContentHash(contentHash) {
         $('input.contentHash').val(contentHash);
-        $('#trigger').attr('data-ally-file-eid', contentHash);
+        $('#source').attr('data-ally-file-eid', contentHash);
     }
 
     async function tryOutStatus() {
@@ -90,7 +92,7 @@
         const url = `${baseUrl}/api/v2/clients/${clientId}/content/${contentHash}/status`;
         const response = await fetch(url, {
             'headers': {
-                'Authorization': `Bearer ${getJwtToken()}`
+                'Authorization': `Bearer ${getJwtToken(generateAllowAllPolicy())}`
             }
         });
         if (response.status === 200) {
@@ -116,7 +118,7 @@
         }
         const response = await fetch(url, {
             'headers': {
-                'Authorization': `Bearer ${getJwtToken()}`
+                'Authorization': `Bearer ${getJwtToken(generateAllowAllPolicy())}`
             }
         });
         if (response.status === 200) {
@@ -151,21 +153,21 @@
         return $('input[name=feedback]:checked', '#api-section-report form').val();
     }
 
-    function getJwtToken() {
+    function getJwtToken(policy) {
         const clientId = getClientId();
         const applicationSecret = getApplicationSecret();
         if (clientId && applicationSecret) {
-            return generateSignature(clientId, applicationSecret);
+            return generateSignature(clientId, applicationSecret, policy);
         } else {
             return null;
         }
     }
 
-    function generateSignature(clientId, applicationSecret) {
+    function generateSignature(clientId, applicationSecret, policy) {
         // Header
         var oHeader = {alg: 'HS256', typ: 'JWT'};
         // Payload
-        var oPayload = {};
+        var oPayload = {'policy': policy};
         var tNow = KJUR.jws.IntDate.get('now');
         oPayload.iat = tNow;
         oPayload.clientId = clientId;
@@ -173,6 +175,46 @@
         var sHeader = JSON.stringify(oHeader);
         var sPayload = JSON.stringify(oPayload);
         return KJUR.jws.JWS.sign("HS256", sHeader, sPayload, applicationSecret);
+    }
+
+    function generateBatchPolicy() {
+        return {
+            'statements': [
+                {
+                    "resource": "content:*",
+                    "actions": ["content:getDetails", "content:getDetails:withFormats", "content:getFormat"]
+                }
+            ]
+        }
+    }
+
+    function generateFormatRequestPolicy(hash) {
+        return {
+            'statements': [
+                {
+                    "resource": `content:${hash}`,
+                    "actions": [
+                        "content:getDetails",
+                        "content:getDetails:withFormats",
+                        "content:getFormat"
+                    ]
+                }
+            ]
+        }
+    }
+
+    function generateAllowAllPolicy(hash) {
+        return {
+            'statements': [
+                {
+                    "resource": `content:*`,
+                    "actions": [
+                        "content:*",
+                        "content:*:*"
+                    ]
+                }
+            ]
+        }
     }
 
 })();
