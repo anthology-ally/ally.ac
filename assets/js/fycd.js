@@ -381,7 +381,7 @@
         }
 
         if (new Date().getTime() < goLiveTime) {
-            const readableDate = new Date(year.date).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric' });
+            const readableDate = new Date(year.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: "UTC" });
             const text = 'Until Fix Your Content Day - ';
             $('#gaad-date-container').text(text + readableDate);
             $('#gaad-date-container-sr').text('Time remaining until the Fix Your Content Day');
