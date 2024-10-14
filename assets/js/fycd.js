@@ -28,9 +28,9 @@
         {
             year: 2024,
             date: Date.parse("2024-10-03T00:00:00Z"),
-            urlTotals: publicBucketUrl + "totals2024.json",
+            urlTotals: publicBucketUrl + "totals2024-validated.json",
             urlClients: publicBucketUrl + "clients2024-validated.json",
-            urlDetails: publicBucketUrl + "gaad-fte2024.json",
+            urlDetails: publicBucketUrl + "gaad-fte2024-validated.json",
             achievements: [20000, 40000, 89937, 100000],
         },
     ];
