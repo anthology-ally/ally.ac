@@ -31,6 +31,14 @@
             urlTotals: publicBucketUrl + "totals2024-validated.json",
             urlClients: publicBucketUrl + "clients2024-validated.json",
             urlDetails: publicBucketUrl + "gaad-fte2024-validated.json",
+            achievements: [50000, 100000, 110248, 150000],
+        },
+        {
+            year: 2025,
+            date: Date.parse("2025-11-18T00:00:00Z"),
+            urlTotals: publicBucketUrl + "totals2025-validated.json",
+            urlClients: publicBucketUrl + "clients2025-validated.json",
+            urlDetails: publicBucketUrl + "gaad-fte2025-validated.json",
             achievements: [20000, 40000, 89937, 100000],
         },
     ];
