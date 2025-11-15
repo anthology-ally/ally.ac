@@ -465,7 +465,7 @@
 
             Highcharts.chart('chart-container', {
                 chart: {
-                    type: 'line',
+                    type: 'line',L
                     backgroundColor: 'transparent',
                     color: '#00C7D1',
                     height: '300px'
