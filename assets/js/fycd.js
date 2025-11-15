@@ -36,9 +36,9 @@
         {
             year: 2025,
             date: Date.parse("2025-11-18T00:00:00Z"),
-            urlTotals: publicBucketUrl + "totals2025-validated.json",
-            urlClients: publicBucketUrl + "clients2025-validated.json",
-            urlDetails: publicBucketUrl + "gaad-fte2025-validated.json",
+            urlTotals: publicBucketUrl + "totals2025.json",
+            urlClients: publicBucketUrl + "gaad-config2025.json",
+            urlDetails: publicBucketUrl + "gaad-fte2025.json",
             achievements: [20000, 40000, 89937, 100000],
         },
     ];
@@ -465,7 +465,7 @@
 
             Highcharts.chart('chart-container', {
                 chart: {
-                    type: 'line',L
+                    type: 'line',
                     backgroundColor: 'transparent',
                     color: '#00C7D1',
                     height: '300px'
