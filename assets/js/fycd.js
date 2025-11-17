@@ -1,5 +1,5 @@
 (function() {
-    const publicBucketUrl = "https://performance-us-east-1-gaadstack-allygaad5a670049-141o6wjvy80ts.s3.amazonaws.com/";
+    const publicBucketUrl = "https://d3hescbt9dmx21.cloudfront.net/";
     const yearsConfig = [
         {
             year: 2021,
