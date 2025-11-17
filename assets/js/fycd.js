@@ -432,7 +432,7 @@
         }
     });
 
-    use(totals$, year$, (totals, year) => {
+    /* use(totals$, year$, (totals, year) => {
         if(totals[year.year]) {
             const {points, last} = totals[year.year];
 
@@ -529,7 +529,7 @@
         } else {
             $("#chart-container").html('');
         }
-    });
+    }); */
 
     use(show$, data$, year$, (show, data, year) => {
         if(show === "top5") {
