@@ -37,7 +37,7 @@
             year: 2025,
             date: Date.parse("2025-11-18T00:00:00Z"),
             urlTotals: publicBucketUrl + "totals2025.json",
-            urlClients: publicBucketUrl + "gaad-config2025.json",
+            urlClients: publicBucketUrl + "clients2025.json",
             urlDetails: publicBucketUrl + "gaad-fte2025.json",
             achievements: [20000, 40000, 89937, 100000],
         },
