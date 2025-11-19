@@ -422,7 +422,7 @@
         }
     });
 
-    use(leaderboard$, (leaderboard) => {
+   /*  use(leaderboard$, (leaderboard) => {
         if(leaderboard) {
             $('.gaad-overview').hide();
             $('.gaad-leaderboard').show();
@@ -430,9 +430,9 @@
             $('.gaad-overview').show();
             $('.gaad-leaderboard').hide();
         }
-    });
+    }); */
 
-    use(totals$, year$, (totals, year) => {
+   /*  use(totals$, year$, (totals, year) => {
         if(totals[year.year]) {
             const {points, last} = totals[year.year];
 
@@ -558,5 +558,5 @@
                 renderRegion(leader);
             }
         }
-    });
+    }); */
 })();
