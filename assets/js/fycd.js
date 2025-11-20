@@ -37,7 +37,7 @@
             year: 2025,
             date: Date.parse("2025-11-18T00:00:00Z"),
             urlTotals: publicBucketUrl + "totals2025.json",
-            urlClients: publicBucketUrl + "clients2025.json",
+            urlClients: publicBucketUrl + "clients2025-corrected.json",
             urlDetails: publicBucketUrl + "gaad-fte2025.json",
             achievements: [20000, 40000, 89937, 100000],
         },
@@ -422,7 +422,7 @@
         }
     });
 
-   /*  use(leaderboard$, (leaderboard) => {
+     use(leaderboard$, (leaderboard) => {
         if(leaderboard) {
             $('.gaad-overview').hide();
             $('.gaad-leaderboard').show();
@@ -430,9 +430,9 @@
             $('.gaad-overview').show();
             $('.gaad-leaderboard').hide();
         }
-    }); */
+    });
 
-   /*  use(totals$, year$, (totals, year) => {
+    use(totals$, year$, (totals, year) => {
         if(totals[year.year]) {
             const {points, last} = totals[year.year];
 
@@ -463,7 +463,7 @@
                 `Wow! We fixed ${formatNumber(year.achievements[3])} files!`
             );
 
-            Highcharts.chart('chart-container', {
+           /*  Highcharts.chart('chart-container', {
                 chart: {
                     type: 'line',
                     backgroundColor: 'transparent',
@@ -529,7 +529,7 @@
         } else {
             $("#chart-container").html('');
         }
-    });
+    }); */
 
     use(show$, data$, year$, (show, data, year) => {
         if(show === "top5") {
@@ -558,5 +558,5 @@
                 renderRegion(leader);
             }
         }
-    }); */
+    });
 })();
