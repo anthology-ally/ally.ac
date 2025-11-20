@@ -524,12 +524,12 @@
                     color: "#00C7D1",
                     data: points
                 }]
-            });
+            }); */
 
         } else {
             $("#chart-container").html('');
         }
-    }); */
+    });
 
     use(show$, data$, year$, (show, data, year) => {
         if(show === "top5") {
