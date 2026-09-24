@@ -41,6 +41,14 @@
             urlDetails: publicBucketUrl + "gaad-fte2025.json",
             achievements: [20000, 40000, 89937, 100000],
         },
+        {
+            year: 2026,
+            date: Date.parse("2026-11-09T12:00:00Z"),
+            urlTotals: publicBucketUrl + "totals2026-corrected.json",
+            urlClients: publicBucketUrl + "clients2026-corrected.json",
+            urlDetails: publicBucketUrl + "gaad-fte2026-corrected.json",
+            achievements: [20000, 40000, 89937, 100000],
+        },
     ];
 
     class ManagedVariable {
