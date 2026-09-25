@@ -43,11 +43,12 @@
         },
         {
             year: 2026,
-            date: Date.parse("2026-11-09T13:00:00Z"),
+            date: Date.parse("2026-11-10T00:00:00Z"),
             urlTotals: publicBucketUrl + "totals2026-corrected.json",
             urlClients: publicBucketUrl + "clients2026-corrected.json",
             urlDetails: publicBucketUrl + "gaad-fte2026-corrected.json",
             achievements: [20000, 40000, 89937, 100000],
+            minFixes: 10,
         },
     ];
 
@@ -291,9 +292,13 @@
             $.getJSON(year.urlDetails, {_: new Date().getTime()}).done(function (response) {
                 const data = [];
                 const regionalLeaders = [];
+                const minFixes = year.minFixes;
 
                 for (var key in results) {
                     var value = results[key];
+                    if (minFixes && !(value >= minFixes)) {
+                        continue;
+                    }
 
                     var uniDetails = response[key];
                     var fixesPerStudent = 0;
@@ -338,7 +343,7 @@
                 const thirdPlace = data[2];
                 data.forEach(element => {
                     // According to the rules, each participant may only be selected as a winner for 1 of the possible winner categories
-                    if (element.id !== overallWinner.id && element.id !== secondPlace.id && element.id !== thirdPlace.id) {
+                    if (element.id !== overallWinner?.id && element.id !== secondPlace?.id && element.id !== thirdPlace?.id) {
                         const location = element.details.location;
                         const fixes = Number(element.fixes.replace(',', ''));
                         if (location in regionalLeaders) {
@@ -368,8 +373,8 @@
     let timeoutGoLive;
 
     use(year$, (year) => {
-        const goLiveTime = year.date - 12 * 36e5; // First time zone
-        const endTime = year.date + (24 + 13) * 36e5; // 24 hours + last time zone
+        const goLiveTime = year.date - 14 * 36e5; // First time zone (UTC+14)
+        const endTime = year.date + (24 + 12) * 36e5; // 24 hours + last time zone (UTC-12)
 
         const yearIndex = yearsConfig.indexOf(year);
 
