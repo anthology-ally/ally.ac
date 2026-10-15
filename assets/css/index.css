@@ -144,3 +144,11 @@ section#integrations {
 }
 
 
+.bb-branding #home-hero {
+  background: none;
+  margin-block-start: 100px;
+}
+
+.bb-branding #awards {
+  background: none;
+}

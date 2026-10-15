@@ -1,0 +1,359 @@
+/* ==========================================================================
+ Design System Tokens — Blackboard Interactive Export 6-23-26
+ Source: Figma design system (ZPa4I9qxZ8Aqj0rVYInItE)
+
+ Usage: import this file in global.scss (already done). Reference tokens
+ via CSS custom properties: color(--color-text-strong), etc.
+ Light-mode values are set in :root; dark-mode overrides in [data-theme="dark"].
+ ========================================================================== */
+
+:root {
+
+  /* --------------------------------------------------------------------------
+   COLOR — Primitive Scale
+   -------------------------------------------------------------------------- */
+
+  --color-base-white:  #ffffff;
+  --color-base-50:     #f9f7f6;
+  --color-base-100:    #eeebe8;
+  --color-base-200:    #e3e0de;
+  --color-base-300:    #ceccca;
+  --color-base-400:    #918f8d;
+  --color-base-500:    #626a68;
+  --color-base-600:    #495a55;
+  --color-base-700:    #314943;
+  --color-base-800:    #1f332e;
+  --color-base-900:    #172622;
+  --color-base-black:  #080d0b;
+
+  /* Brand Primary */
+  --color-primary-dark:   #172622;
+  --color-primary-green:  #1d5245;
+  --color-primary-light:  #f9f7f6;
+
+  /* Brand Tones */
+  --color-green-100:        #d9f2ec;
+  --color-green-200:        #40b598;
+  --color-green-300:        #1d5245;
+
+  --color-vibrant-100:      #f2edfd;
+  --color-vibrant-200:      #bfa4f4;
+  --color-vibrant-300:      #5b4587;
+
+  --color-opportunity-100:  #edf8fc;
+  --color-opportunity-200:  #bbe6f5;
+  --color-opportunity-300:  #a2c6dc;
+
+  --color-semester-100:     #f9f7f6;
+  --color-semester-200:     #f1dbcf;
+  --color-semester-300:     #885e56;
+
+  --color-fireside-100:     #fdf2ed;
+  --color-fireside-200:     #d0825a;
+  --color-fireside-300:     #933d10;
+
+  /* System */
+  --color-system-error:       #ff3e00;
+  --color-system-error-light: rgba(255, 62, 0, 0.1);
+  --color-system-error-dark:  #c23400;
+
+  /*  --------------------------------------------------------------------------
+   COLOR — Semantic Tokens (light mode defaults)
+   -------------------------------------------------------------------------- */
+
+  /* Surface */
+  --color-surface-surface-1:  #ffffff;
+  --color-surface-surface-2:  #f9f7f6;
+  --color-surface-surface-3:  #eeebe8;
+
+  /* Text */
+  --color-text-strong:  #172622;
+  --color-text-medium:  #495a55;
+  --color-text-subtle:  #626a68;
+
+  /* Icon (mirrors text — same palette, separate token group) */
+  --color-icon-strong:  #172622;
+  --color-icon-medium:  #495a55;
+  --color-icon-subtle:  #626a68;
+
+  /* Border */
+  --color-border-subtle:  #e3e0de;
+  --color-border-medium:  #ceccca;
+  --color-border-strong:  #626a68;
+
+  /* --------------------------------------------------------------------------
+   TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+
+  /*  Font families (Next.js injects the actual webfont vars at runtime;
+   these are the semantic aliases design system components should use)
+  */
+  --font-family-body:      "IBM Plex Sans", Helvetica, sans-serif;
+  --font-family-fallback:  "Wittgenstein", Georgia, serif;
+
+  /* Font weights */
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+
+  /* Font sizes */
+  --font-size-display-l:   clamp(4rem, 6.5vw, 6rem);      /* 96px */
+  --font-size-display-m:   clamp(3rem, 5.5vw, 5rem);      /* 80px */
+  --font-size-display-s:   clamp(2rem, 4.5vw, 4rem);      /* 64px */
+  --font-size-headline-l:  clamp(1.75rem, 3.5vw, 3rem);   /* 48px */
+  --font-size-headline-m:  clamp(1.5rem, 2.5vw, 2rem);    /* 32px */
+  --font-size-headline-s:  clamp(1.25rem, 2vw, 1.5rem);   /* 24px */
+  --font-size-title-xl:    clamp(1.5rem, 3vw, 2.5rem);    /* 40px */
+  --font-size-title-l:     clamp(1.25rem, 2.5vw, 2rem);   /* 32px */
+  --font-size-title-m:     clamp(1.125rem, 2vw, 1.5rem);  /* 24px */
+  --font-size-title-s:     clamp(1rem, 1.5vw, 1.25rem);   /* 20px */
+  --font-size-body-l:      clamp(1.25rem, 2.5vw, 2rem);   /* 32px */
+  --font-size-body-ml:     clamp(1.125rem, 2vw, 1.5rem);  /* 24px */
+  --font-size-body-m:      clamp(1rem, 1.5vw, 1.25rem);   /* 20px */
+  --font-size-body-s:      1rem;                          /* 16px */
+  --font-size-label-l:     clamp(1rem, 1.5vw, 1.25rem);   /* 20px */
+  --font-size-label-m:     1rem;                          /* 16px */
+  --font-size-label-s:     0.875rem;                      /* 14px */
+
+  /* Line heights */
+  --line-height-display:   1.1;
+  --line-height-headline:  1.3;
+  --line-height-title:     1.3;
+  --line-height-body:      1.7;
+  --line-height-label:     1.3;
+  --line-height-quote:     1.4;
+
+  /* Letter spacing */
+  --letter-spacing-display:   -0.03em;
+  --letter-spacing-headline:  -0.02em;
+  --letter-spacing-title:     -0.02em;
+  --letter-spacing-body:      0;
+  --letter-spacing-label:     0;
+
+  /*  --------------------------------------------------------------------------
+   SPACING
+   -------------------------------------------------------------------------- */
+
+  --space-0:    0;
+  --space-2:    0.125rem;  /* 2px */
+  --space-4:    0.25rem;   /* 4px */
+  --space-8:    0.5rem;    /* 8px */
+  --space-12:   0.75rem;   /* 12px */
+  --space-16:   1rem;      /* 16px */
+  --space-20:   1.25rem;   /* 20px */
+  --space-24:   1.5rem;    /* 24px */
+  --space-28:   1.75rem;   /* 28px */
+  --space-32:   2rem;      /* 32px */
+  --space-40:   2.5rem;    /* 40px */
+  --space-48:   3rem;      /* 48px */
+  --space-56:   3.5rem;    /* 56px */
+  --space-64:   4rem;      /* 64px */
+  --space-72:   4.5rem;    /* 72px */
+  --space-80:   5rem;      /* 80px */
+  --space-92:   5.75rem;   /* 92px */
+  --space-96:   6rem;      /* 96px */
+  --space-120:  7.5rem;    /* 120px */
+  --space-128:  8rem;      /* 128px */
+  --space-152:  9.5rem;    /* 152px */
+  --space-156:  9.75rem;   /* 156px */
+  --space-160:  10rem;     /* 160px */
+  --space-192:  12rem;     /* 192px */
+  --space-200:  12.5rem;   /* 200px */
+  --space-208:  13rem;     /* 208px */
+  --space-224:  14rem;     /* 224px */
+  --space-256:  16rem;     /* 256px */
+  --space-260:  16.25rem;  /* 260px */
+  --space-272:  17rem;     /* 272px */
+  --space-280:  17.5rem;   /* 280px */
+  --space-288:  18rem;     /* 288px */
+  --space-360:  22.5rem;   /* 360px */
+  --space-560:  35rem;     /* 560px */
+  --space-720:  45rem;     /* 720px */
+  --space-1200: 75rem;     /* 1200px */
+  --space-1440: 90rem;     /* 1440px */
+
+  /*  --------------------------------------------------------------------------
+   BORDER RADIUS
+   -------------------------------------------------------------------------- */
+
+  --radius-none:  0;
+  --radius-s:     0.25rem;  /* 4px */
+  --radius-m:     0.5rem;   /* 8px */
+  --radius-l:     1.5rem;   /* 24px */
+  --radius-full:  50%;
+
+  /*  --------------------------------------------------------------------------
+   ELEVATION (box-shadow)
+   -------------------------------------------------------------------------- */
+
+  --elevation-1: 0 2px 6px -1px rgba(23, 38, 34, 0.08),
+                 0 1px 2px 0 rgba(23, 38, 34, 0.06);
+
+  --elevation-2: 0 6px 16px -2px rgba(23, 38, 34, 0.10),
+                 0 2px 4px -1px rgba(23, 38, 34, 0.06);
+
+  --elevation-3: 0 16px 32px -4px rgba(23, 38, 34, 0.14),
+                 0 4px 8px -2px rgba(23, 38, 34, 0.08);
+}
+
+/*  --------------------------------------------------------------------------
+ Dark mode — semantic token overrides only
+ Primitives never change; only semantic aliases flip.
+ Apply [data-theme="dark"] to <html> or the root layout element.
+ -------------------------------------------------------------------------- */
+
+[data-theme="dark"] {
+  /* Surface */
+  --color-surface-surface-1:  #161613;
+  --color-surface-surface-2:  #1f332e;
+  --color-surface-surface-3:  #172622;
+
+  /* Text */
+  --color-text-strong:  #f9f7f6;
+  --color-text-medium:  #e3e0de;
+  --color-text-subtle:  #ceccca;
+
+  /* Icon */
+  --color-icon-strong:  #f9f7f6;
+  --color-icon-medium:  #e3e0de;
+  --color-icon-subtle:  #ceccca;
+
+  /* Border */
+  --color-border-subtle:  #626a68;
+  --color-border-medium:  #495a55;
+  --color-border-strong:  #f9f7f6;
+}
+
+ /* --------------------------------------------------------------------------
+ Typography utility classes
+ Composable text style helpers that Storybook components can use directly.
+ -------------------------------------------------------------------------- */
+
+.ds-display-l {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-display-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-display);
+}
+
+.ds-display-m {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-display-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-display);
+}
+
+.ds-display-s {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-display-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-display);
+}
+
+.ds-headline-l {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-headline-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-headline);
+}
+
+.ds-headline-m {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-headline-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-headline);
+}
+
+.ds-headline-s {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-headline-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-headline);
+}
+
+.ds-title-xl {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-title-xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-title);
+}
+
+.ds-title-l {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-title-l);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-title);
+}
+
+.ds-title-m {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-title-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-title);
+}
+
+.ds-title-s {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-title-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-title);
+}
+
+.ds-body-l {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-l) !important;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.ds-body-ml {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-ml);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.ds-body-m {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-m) !important;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.ds-body-s {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body-s);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.ds-label-l {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-label-l);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-label);
+}
+
+.ds-label-m {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-label-m);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-label);
+}
+
+.ds-label-s {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-label-s);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-label);
+}
+
+.ds-quote {
+  font-family: var(--font-family-fallback);
+  font-size: var(--font-size-headline-s);
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-quote);
+  letter-spacing: 0;
+}

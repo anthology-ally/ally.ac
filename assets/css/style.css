@@ -287,7 +287,7 @@ img.features-icon.courses {
 }
 
 .btn-secondary {
-    border: solid 2px #00C7D1 ;
+    border: solid 2px #00C7D1;
     border-radius: 3px;
     color: #121519;
     display: inline-block;
@@ -481,4 +481,67 @@ footer figure {
 
 p.contrast-issue {
 	color: #AAAAAA;
+}
+
+.bb-branding {
+  font-family: var(--font-family-body);
+  background-color: var(--color-base-white);
+}
+
+.bb-branding h1,
+.bb-branding h2,
+.bb-branding h3,
+.bb-branding h4,
+.bb-branding h5,
+.bb-branding h6 {
+  font-family: var(--font-family-fallback);
+}
+
+.bb-branding #top,
+.bb-branding .header,
+.bb-branding footer {
+  background: var(--color-primary-green);
+}
+
+.bb-branding #top h1 {
+  margin-block-start: 30px;
+}
+
+.bb-branding .primary-nav {
+  display: flex;
+  flex-flow: wrap;
+  gap: var(--space-48);
+  place-items: center;
+  place-content: center;
+  min-height: 52px;
+}
+
+.bb-branding .primary-nav li {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.bb-branding #btn-primary {
+  border-color: var(--color-green-200);
+}
+
+.bb-branding #btn-primary:hover,
+.bb-branding #btn-primary:focus {
+    background-color: var(--color-green-200);
+    color: var(--color-primary-dark);
+}
+
+.bb-branding .btn-secondary {
+  border-color: var(--color-green-200);
+}
+
+.bb-branding .btn-secondary:hover,
+.bb-branding .btn-secondary:focus {
+  background-color: var(--color-green-200);
+  color: var(--color-primary-dark);
+}
+
+.bg-opportunity {
+  background: var(--color-opportunity-100);
 }
