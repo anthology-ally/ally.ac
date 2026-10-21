@@ -298,6 +298,10 @@ img.features-icon.courses {
     text-decoration: none;
 }
 
+.btn-alt {
+  color: var(--color-base-white);
+}
+
 .btn-secondary i {
     vertical-align: bottom;
 }
@@ -484,6 +488,20 @@ p.contrast-issue {
 	color: #AAAAAA;
 }
 
+.grid-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-block-start: 2rem;
+}
+
+.grid-list li {
+  display: list-item;
+  list-style-type: disc;
+  margin-inline-start: 16px;
+  font-size: 16px;
+}
+
 .bb-branding {
   font-family: var(--font-family-body);
   background-color: var(--color-base-white);
@@ -642,6 +660,24 @@ p.contrast-issue {
 
 .features-resources .row {
   align-items: start;
+}
+
+.resource-card figure img {
+  margin: 0;
+}
+
+.resource-card-content {
+  padding: 2rem;
+  background: var(--color-fireside-100);
+}
+
+.features .resource-card-content h3 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.resource-card-content .btn-secondary {
+  padding: 10px 16px;
 }
 
 @media (max-width: 767px) {
