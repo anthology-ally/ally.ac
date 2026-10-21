@@ -613,7 +613,7 @@ p.contrast-issue {
   z-index: 10;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
-  padding: var(--space-48);
+  padding: var(--space-120) var(--space-48) var(--space-64);
 }
 .rdl-y-container img {
   max-width: 100%;
