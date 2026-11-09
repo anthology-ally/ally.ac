@@ -44,9 +44,9 @@
         {
             year: 2026,
             date: Date.parse("2026-11-10T00:00:00Z"),
-            urlTotals: publicBucketUrl + "totals2026-corrected.json",
-            urlClients: publicBucketUrl + "clients2026-corrected.json",
-            urlDetails: publicBucketUrl + "gaad-fte2026-corrected.json",
+            urlTotals: publicBucketUrl + "totals2026.json",
+            urlClients: publicBucketUrl + "clients2026.json",
+            urlDetails: publicBucketUrl + "gaad-fte2026.json",
             achievements: [20000, 40000, 89937, 100000],
             minFixes: 10,
         },
